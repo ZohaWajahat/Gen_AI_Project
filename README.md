@@ -84,3 +84,21 @@ Output: A markdown table comparing $\text{CIDEr}$, $\text{SPICE}$, $\text{CLIPSc
 
 **Limitation Addressed:** Semantic Fidelity.  <br>
 **Trade-off:** Low Fluency, Slow Inference.
+
+### Hybrid VLM (HAR Pipeline)
+The Hybrid Pipeline addresses the ZeroCap limitations through a two-stage training process:
+
+#### Stage 1: MLE Initialization
+• ** Goal:** Establish the foundational ability to generate grammatically correct captions conditioned on the visual prefix.<br>
+• **Training:** Fine-tunes the MLP Projector and the $\text{Mistral}$ $\text{LM}$ using Maximum Likelihood Estimation ($\text{MLE}$) loss on supervised data.
+
+#### Stage 2: SCST Refinement
+• **Goal:** Optimize the policy for human consensus and fluency metrics.
+• **Training:** Refines the $\text{MLE}$-initialized model using Self-Critical Sequence Training ($\text{SCST}$), where the reward is the $\text{CIDEr-D}$ score.
+
+     | LM                    | VSM               | Integration                            | Training                           |
+     |:---------------------:|:-----------------:|:--------------------------------------:|:----------------------------------:|
+     | $\text{Mistral-7B}$   | $\text{ViT-L/14}$ | Feature Injection (Soft Prompting)     | Two-Stage Supervised (MLE + SCST)  |
+
+## 🤝 Contributing
+Contributions are welcome! If you find bugs or want to improve the model architecture (e.g., replace the linear projector with a Q-Former), please open an issue or submit a pull request.
