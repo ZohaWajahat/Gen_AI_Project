@@ -1,0 +1,10 @@
+torch
+torchvision
+torchaudio
+transformers
+open_clip_torch
+datasets
+accelerate
+pycocoevalcap
+nltk
+scst
