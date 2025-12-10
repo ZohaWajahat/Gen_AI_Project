@@ -35,7 +35,7 @@ pip install -r requirements.txt
 # Assuming 'open_clip', 'tqdm', 'transformers', 'torch', 'pandas', 'pycocotools', 'pycocoevalcap' are listed in requirements.txt
 ```
 
-#### 4. Download COCO Data: Download the $\text{COCO 2017}$ validation images and the $\text{captions\_val2017.json}$ annotation file.
+#### 4. Download COCO Data: Download the $\text{COCO 2017}$ validation images and the $\text{captions\val2017.json}$ annotation file.
 ```powershell
 # Create the data structure
 mkdir -p data/coco/annotations
@@ -77,7 +77,7 @@ Output: A markdown table comparing $\text{CIDEr}$, $\text{SPICE}$, $\text{CLIPSc
 ## 📘 Methodology Breakdown
 ### ZeroCap Baseline (Inference Guidance)
 
-    | LM | VSM | Integation | Training |
-    | :------: | :------: | :------: |
-    | $\text{GPT-2 Medium}$  | $\text{ViT-B/32}$  | Logit Modification at every step.  | None (Zero-Shot) |
-    | **Limitation Addressed:** Semantic Fidelity. Trade-off: Low Fluency, Slow Inference.  | | | |
+     LM | VSM | Integation | Training 
+     :------: | :------: | :------: 
+     $\text{GPT-2 Medium}$  | $\text{ViT-B/32}$  | Logit Modification at every step.  | None (Zero-Shot) 
+     **Limitation Addressed:** Semantic Fidelity. Trade-off: Low Fluency, Slow Inference.  | | | 
