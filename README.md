@@ -78,7 +78,8 @@ Output: A markdown table comparing $\text{CIDEr}$, $\text{SPICE}$, $\text{CLIPSc
 ## 📘 Methodology Breakdown
 ### ZeroCap Baseline (Inference Guidance)
 
-     LM | VSM | Integation | Training 
-     --- | --- | ---- | 
-     $\text{GPT-2 Medium}$  | $\text{ViT-B/32}$  | Logit Modification at every step.  | None (Zero-Shot) 
-     **Limitation Addressed:** Semantic Fidelity. Trade-off: Low Fluency, Slow Inference.  | | 
+     | LM                  | VSM           | Integration                          | Training          |
+     |---------------------|---------------|---------------------------------------|-------------------|
+     | $\text{GPT-2 Medium}$ | $\text{ViT-B/32}$ | Logit Modification at every step.     | None (Zero-Shot)  |
+     | **Limitation Addressed:** Semantic Fidelity. Trade-off: Low Fluency, Slow Inference. | | | |
+
